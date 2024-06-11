@@ -16,14 +16,14 @@ while True:
     if user_action.startswith('add'):
         todo = user_action[4:]
 
-        todos = function14.get_todos()
+        todos = functions.get_todos()
 
         todos.append(todo + '\n')
 
-        function14.write_todos(todos)
+        functions.write_todos(todos)
         
     elif user_action.startswith('show'):
-        todos = function14.get_todos()
+        todos = functions.get_todos()
 
         for index, item in enumerate(todos):
             item = item.strip('\n')
@@ -34,12 +34,12 @@ while True:
             number = int(user_action[5:])
             number = number - 1
             
-            todos = function14.get_todos()
+            todos = functions.get_todos()
 
             new_todo = input("enter new todo: ")
             todos[number] = new_todo + '\n'
 
-            function14.write_todos(todos)
+            functions.write_todos(todos)
 
         except ValueError:
             print('Your Command is not valid.')
@@ -49,13 +49,13 @@ while True:
         try:
             complete = int(user_action[9:])
 
-            todos = function14.get_todos()
+            todos = functions.get_todos()
 
             index = complete - 1
             to_be_removed = todos[index]
             todos.pop(index)
 
-            function14.write_todos(todos)
+            functions.write_todos(todos)
 
             message = f"Todo {to_be_removed.strip('\n')} was removed from the list."
             print(message)
