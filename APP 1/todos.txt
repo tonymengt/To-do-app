@@ -1,3 +1,6 @@
-run
-study coding
+walk
+test
 cook dinner
+walk
+clean dishes
+workout
