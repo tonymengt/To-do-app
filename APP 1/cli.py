@@ -1,7 +1,13 @@
 
 # from function14 import get_todos, write_todos
-from modules import function14 #if this method is used, function14 needs to be referenced when using functions within the function14 file. i.e. function14.get_todos()
+from modules import functions #if this method is used, function14 needs to be referenced when using functions within the function14 file. i.e. function14.get_todos()
 # use from "name of directory" if the function file is stored within another directory.
+import time 
+
+# Glob module, this allows you to look for specific file type.
+
+now = time.strftime("%b %d, %Y %H:%M:%S")
+print("It is", now)
 while True: 
     user_action = input("Type add, show, edit, complete, or exit: ")
     user_action = user_action.strip()
