@@ -8,6 +8,9 @@ def make_archive(filepaths, dest_dir):
             filepath = pathlib.Path(filepath)
             archive.write(filepath,arcname = filepath.name)
 
+def extract_archive(archivepath, dest_dir):
+    with zipfile.ZipFile(archivepath, 'r') as archive:
+        archive.extractall(dest_dir)
 
 if __name__ == "__main__":
     make_archive(filepaths=['APP 1/bonus/bonus1.py', 'APP 1/bonus/bonus2.py'], dest_dir='APP 1/bonus/dest')
