@@ -1,4 +1,3 @@
-walk
 test
 cook dinner
 walk
